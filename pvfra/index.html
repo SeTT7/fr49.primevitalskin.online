@@ -1021,20 +1021,6 @@ document.addEventListener(
   true
 );
 </script>
-	<script>
-document.addEventListener(
-  'click',
-  function (e) {
-    var link = e.target.closest('a[href*="https://pay.mycheckoutt.com"], a[href*="https://go.centerpag.com"]');
-    if (!link) return;
 
-    ttq.track('CompletePayment', {
-      value: 2,
-      currency: 'USD'
-    });
-  },
-  true
-);
-</script>
 
 </body></html>
