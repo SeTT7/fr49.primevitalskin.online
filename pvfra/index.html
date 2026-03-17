@@ -1021,6 +1021,21 @@ document.addEventListener(
   true
 );
 </script>
+	<script>
+document.addEventListener('click', function (e) {
+  var el = e.target.closest('.smartplayer-anchor-button');
+  if (!el) return;
+
+  var text = (el.innerText || '').trim().toUpperCase();
+
+  if (text === 'ACHETER MAINTENANT') {
+    ttq.track('CompletePayment', {
+      value: 2,
+      currency: 'USD'
+    });
+  }
+});
+</script>
 
 
 </body></html>
